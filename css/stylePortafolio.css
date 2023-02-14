@@ -1,0 +1,29 @@
+
+.portafolio-tittle{
+    grid-column: 2/9;
+    margin: 40px 0;
+}
+.portafolio-tittle h2{
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.portafolio-tittle p{
+    font-size: 32px;
+}
+.container-all__project{
+    grid-column: 2/9;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    width: 100%;
+    border: solid 2px var(--color-gray);
+}
+.project__item{
+    height: 150px;
+    width: 100%;
+    background-color: aqua;
+}
+.main-portafolio{
+
+}
