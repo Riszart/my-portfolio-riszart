@@ -67,6 +67,11 @@ body{
     grid-template-columns: 100%;
     grid-template-rows: 600px 100px auto 200px;
 }
+.summary-main__up{
+    background-image: url(/my-portfolio-riszart/img/digital-eye-copia.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 200%;
+}
 .main-body-container{
     width: 80%;
     margin: 0 auto;
@@ -253,13 +258,16 @@ body{
     border-radius: 10px;
     padding: 0 40px;
 }
-.cien-por{
-    height: 100%;
-    width: 100%;
-}
+
 h4{
     font-size: 22px;
     line-height: 50px;
     height: 50px;
     color: var(--color-blue-half);
+}
+.image-back-two {
+    background-image: url(/my-portfolio-riszart/img/back-theme.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

@@ -1,0 +1,54 @@
+body{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    overflow: hidden;
+
+}
+.footer-container-all{
+    grid-column: 2/3;
+    position: relative;
+    z-index: 100;
+}
+.footer-up-content{
+    margin-top: 35px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-up-content > figure{
+    height: 100px;
+}
+.footer-up-content > figure > img{
+    height: 50px;
+    width: 50px;
+}
+.footer-up-content p:nth-child(1){
+    margin-bottom: 15px;
+}
+.footer-up-content p:nth-child(3), .footer-line p{
+    color: var(--color-style-black);
+    font-weight: bold;
+}
+.footer-line{
+    width: 100%;
+    border-top: solid var(--color-gray) 1px;
+    display: flex;
+    justify-content: center;
+}
+.figure-footer-container > img{
+    border-radius: 15px;
+    background-color: aliceblue;
+}
+.image-footer-three{
+    background-image: url(/my-portfolio-riszart/img/brain-colors.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    height: 150px;
+    width: 250px;
+    bottom: 30px;
+    right: 0;
+    z-index: 10;
+}
