@@ -9,6 +9,10 @@ document.querySelector(".twitter").addEventListener("click", ()=>changeUrl("http
 document.querySelector(".linkeding").addEventListener("click", ()=>changeUrl("https://www.linkedin.com/", "_blank"))
 document.querySelector(".github").addEventListener("click", ()=>changeUrl("https://github.com/", "_blank"))
 
+document.body.style.overflow = "hidden"
+setTimeout(()=>{document.body.style.overflow = "auto"},2000)
+
+
 const changeUrl = (url, target)=>{
 	if(window.location.pathname !== url) {
 		document.body.style.overflow = "hidden"

@@ -1,5 +1,7 @@
-start()
+document.body.style.overflow = "hidden"
+setTimeout(()=>{document.body.style.overflow = "auto"},2000)
 
+start()
 function start(){
 	setTimeout(()=>{
 		let a = document.querySelector(".inicio-back__start")
