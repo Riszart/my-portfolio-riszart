@@ -1,24 +1,47 @@
-const buttonAbout = document.getElementById('about').addEventListener('click', ()=>{nextPage('about')})
-const buttonProgramming = document.getElementById('programming').addEventListener('click', ()=>{nextPage('programming')})
-const buttonWork = document.getElementById('work').addEventListener('click', ()=>{nextPage('work')})
-const buttonContact = document.getElementById('contact').addEventListener('click', ()=>{nextPage('contact')})
-const buttonSummary = document.getElementById('summary').addEventListener('click', ()=>{nextPage('summary')})
-const changeBody = document.querySelector('.bodyTras')
+document.querySelector(".about").addEventListener("click", ()=>changeUrl("/html/about.html", '_self'))
+document.querySelector(".my-skill").addEventListener("click", ()=>changeUrl("/html/skill.html", '_self'))
+document.querySelector(".work").addEventListener("click", ()=>changeUrl("/html/portafolio.html", '_self'))
+document.querySelector(".contact").addEventListener("click", ()=>changeUrl("/html/contact.html", '_self'))
+document.querySelector(".CV").addEventListener("click", ()=>changeUrl("/html/summary.html", '_self'))
+document.querySelector(".logo").addEventListener("click", ()=>changeUrl("/index.html", '_self'))
+document.querySelector(".facebook").addEventListener("click", ()=>changeUrl("https://www.facebook.com/", "_blank"))
+document.querySelector(".twitter").addEventListener("click", ()=>changeUrl("https://twitter.com/?lang=en", "_blank"))
+document.querySelector(".linkeding").addEventListener("click", ()=>changeUrl("https://www.linkedin.com/", "_blank"))
+document.querySelector(".github").addEventListener("click", ()=>changeUrl("https://github.com/", "_blank"))
 
-const linkPage = {
-    about:'/my-portfolio-riszart/html/about.html',
-    programming:'/my-portfolio-riszart/html/programming.html',
-    work:'/my-portfolio-riszart/html/portafolio.html',
-    contact:'/my-portfolio-riszart/html/contact.html',
-    summary:'/my-portfolio-riszart/html/summary.html',
-}
-console.log(buttonSummary)
+const changeUrl = (url, target)=>{
+	if(window.location.pathname !== url) {
+		document.body.style.overflow = "hidden"
+		end()
+		setTimeout(()=>{
+			window.open(url, target)
 
-function nextPage(element){
-    const iframe = document.querySelector('.iframe-item')
-    let itemElement = Object.keys(linkPage).find(item=>item==element)
-    iframe.src = linkPage[itemElement]
-    if( itemElement == 'summary'){
-        changeBody.classList.add('view-page')
-    }
+		},1000)
+	}
+
 }
+
+if(window.location.pathname == "/html/contact.html"){
+	document.querySelector(".contact-send").addEventListener("click", ()=>{
+		document.querySelector('.content-formulario').classList.add("change-property")
+		document.body.style.overflow = "hidden"
+
+	})
+	document.querySelector(".formulario-close").addEventListener("click", ()=>{
+		document.querySelector('.content-formulario').classList.remove("change-property")
+		setTimeout(()=>{document.body.style.overflow = "auto"}, 1000)})
+}
+start()
+function start(){
+	setTimeout(()=>{
+		let a = document.querySelector(".inicio-back__start")
+		a.style.width = "0px"
+		a.style.transition = "width 1s ease"
+	},1000)
+}
+function end(){
+		let b = document.querySelector(".inicio-back__end")
+		b.style.width = "100vw"
+		b.style.transition = "width 1s ease"
+}
+

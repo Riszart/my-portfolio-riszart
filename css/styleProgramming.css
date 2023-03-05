@@ -1,9 +1,0 @@
-.main-technologies{
-    display: grid;
-    gap: 3px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-.main-technologies div{
-    height: 250px;
-    width: 250px;
-}

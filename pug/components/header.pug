@@ -1,0 +1,19 @@
+header.header-principal
+  div.header-container
+    div.header-container__logo
+      img(src="", alt="").photo
+      img(src="/../img/riszart-logo-white.webp", alt="").logo
+    ul.header-container__list
+      each item in itemNav 
+        if item === "skill"
+          li.my-skill: p= "my " +item
+        else
+          li(class=item): p=item
+    div.header-container__icons
+      img(src="/img/github-icon.svg", alt='github', class='github')
+      img(src="/img/linkedin-icon.svg", alt='linkeding', class='linkeding')
+      img(src="/img/twitter-icon.svg", alt='twitter', class='twitter')
+      img(src="/img/facebook-icon.svg", alt='facebook', class='facebook')
+    div.header-container__footernav 
+      p Designed and Developed
+      p by Riszart

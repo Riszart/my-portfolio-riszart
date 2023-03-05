@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+	include components/head.pug
+	include components/settings.pug
+	include components/mixin.pug
+	body
+		include components/temporalStart.pug
+		include components/temporalEnd.pug
+		include components/header.pug
+		main.container-skill 
+			section.skill 
+				div: img(src="/img/html-icon.svg", alt="")
+				div: img(src="/img/css-icon.svg", alt="")
+				div: img(src="/img/javascript-icon.svg", alt="")
+				div: img(src="/img/pug.png", alt="")
+				div: img(src="/img/sass-icon.svg", alt="")
+				div: img(src="/img/nodejs-icon.svg", alt="")
+				div
+				div
+		script(src="/../js/script.js") 
+		
